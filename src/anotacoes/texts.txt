@@ -1,0 +1,117 @@
+1. Header (Navbar)
+Logo: 🌿 Plants Avenue
+
+Menu (Desktop): Home | Shop | About | Blog | Contact
+
+Ícones (Direita): Favoritos (Coração), Carrinho (Sacola), Perfil (Usuário).
+
+Nota Mobile: No mobile, os links somem e vira um menu hambúrguer (☰).
+
+2. Hero Section (Seção Principal)
+Título Principal: > Bring The Nature Close To You (Traga a Natureza para Perto de Você)
+
+Subtítulo: > Enhance your space with our indoor and herbal plants. Experience the calming effect of greenery, right at home. (Melhore o seu espaço com nossas plantas de interior e ervas. Experimente o efeito calmante da vegetação, direto na sua casa.)
+
+Preço em destaque na foto: $8
+
+Botão CTA: Discover Now ➔ (Descubra Agora)
+
+3. Info Badges (Faixa Verde Escura)
+Uma fileira com 3 colunas de benefícios simples:
+
+Free Delivery: For orders over $50 (Frete Grátis: Para pedidos acima de $50)
+
+Safe Payment: 100% secure payment (Pagamento Seguro: Pagamento 100% protegido)
+
+Friendly Services: 24/7 customer support (Atendimento Amigável: Suporte ao cliente 24/7)
+
+4. Promo Banners (As duas caixas com fotos de plantas)
+Card 1 (Esquerda):
+
+Subtítulo: Big Sale Products
+
+Título: Indoor Plants (Plantas de Interior)
+
+Botão: Shop Now (Comprar Agora)
+
+Card 2 (Direita):
+
+Subtítulo: Top Products
+
+Título: Herbal Plants (Ervas Medicinais/Aromáticas)
+
+Botão: Shop Now (Comprar Agora)
+
+5. Our Products (Grade de Produtos)
+Abas de Filtro: What's New (Novidades) | Best Sellers (Mais Vendidos) | Customer Favorites (Favoritos dos Clientes)
+
+Abaixo, uma grade com os produtos (exemplo para os cards repetidos na imagem):
+
+Produto 1: Homalomena Rubescens — $41.00
+
+Produto 2: Ucuala Grandis — $41.00
+
+Produto 3: Fiddle Leaf Fig — $41.00
+(Dica: Adicione um ícone de coração no canto superior direito de cada card para simular a lista de desejos).
+
+6. Mid-Page Banner (Banner "Grow Plant")
+Título: > Grow Plant For A Better Life (Cultive Plantas para uma Vida Melhor)
+
+Texto: Cultivating plants enhances well-being and contributes to a healthier environment, fostering a more fulfilling life. (Cultivar plantas aumenta o bem-estar e contribui para um ambiente mais saudável, promovendo uma vida mais plena.)
+
+Botão: Read More ➔ (Leia Mais)
+
+7. Steps / Features (Passos para cuidar das plantas)
+Título Principal: > Steps to start taking care of your plants (Passos para começar a cuidar das suas plantas)
+
+Subtítulo: The right solution for the care of green and smart plants. (A solução certa para o cuidado de plantas verdes e inteligentes.)
+
+As 3 colunas com ícones:
+
+Humidity Control: Effective humidity control is essential for properly caring for plants, ensuring optimal growth and overall health. (Controle de Umidade)
+
+Pest Anticipation: Implementing proactive pest anticipation measures is essential to safeguard and nurture the well-being of plants. (Antecipação de Pragas)
+
+Pruning Weeds: Taking care of plants involves diligently managing unwanted growth to ensure their well-being. (Poda de Ervas Daninhas)
+
+8. Blog Section (Texto ao lado da foto de folha grande)
+Título: > Come with us how to grow your plants to be better and healthier (Venha conosco aprender como cultivar suas plantas para que fiquem melhores e mais saudáveis)
+
+Texto: Join us on a journey to learn the art of growing healthier and more vibrant plants. We're here to share tips and insights that will help you nurture your garden to its fullest potential. Come along with us, and let's explore the simple yet effective ways to make your plants thrive naturally.  
+
+Botão: Read More ➔ (Leia Mais)
+
+9. Instagram Widget
+Título: Follow us on Instagram (Siga-nos no Instagram)
+
+Aqui você pode colocar uma grid com 4 imagens quadradas de plantas.
+
+10. Footer (Rodapé)
+Seção de Newsletter (Caixa Verde Escura):
+
+Texto: Stay In The Loop With Special Offers, Plant Parenting Tips, & More. (Fique por dentro de ofertas especiais, dicas de cultivo e mais.)
+
+Input: Campo de e-mail com um botão de seta para enviar.
+
+Informações de Contato (Esquerda):
+
+Endereço fictício: 123 Hello Street, CA 90214, LA
+
+Telefone fictício: +6287165320
+
+E-mail fictício: plants.ave@gmail.com
+
+Texto Central:
+
+Logo: Plants Avenue
+
+Descrição: Caring for plants enhances your space with life. Whether it's a small herb garden or a thriving jungle, nurturing your plants rewards you with greenery and serenity.
+
+Ícones Redes Sociais: Facebook, Instagram, YouTube.
+
+Links Rápidos (Direita): Home | Shop | About | Blog | Contact
+
+Copyright: © 2024 Plants Avenue. All Rights Reserved.
+
+🛠️ Desafio Técnico para o seu CSS:
+Dê uma olhada em como as imagens do topo (na seção Hero) e do meio da página possuem esse fundo em formato de arco (U invertido). Você pode conseguir esse efeito nos containers das fotos usando a propriedade CSS:
