@@ -10,10 +10,10 @@ export function Button({ buttonText, icon: Icon, ...props }: ButtonProps) {
   return (
     <button
       className={clsx(
-        "w-fit rounded-3xl",
+        "w-fit rounded-3xl text-white",
         "text-sm md:text-base text-nowrap",
         "px-2 py-1 md:px-4 md:py-2",
-        "bg-[#bc6942] cursor-pointer",
+        "bg-secondary cursor-pointer",
         "flex items-center gap-2",
       )}
       {...props}

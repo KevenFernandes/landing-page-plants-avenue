@@ -5,14 +5,15 @@
   --foreground: #171717;
   --hero-section: #0e311f;
   --badge-section: #0b281c;
+  --secondary: #bc6942;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-hero: var(--hero-section);
-  --color-info: var(--badge-section);
-
+  --color-primary: var(--badge-section); /*TODO: Mudar para primary*/
+  --color-secondary: var(--secondary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-playfair: var(--font-playfair-display);

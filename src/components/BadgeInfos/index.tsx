@@ -4,7 +4,7 @@ import { Container } from "../Container";
 
 export function BadfeInfos() {
   return (
-    <section className="bg-info text-white/70 py-16">
+    <section className="bg-primary text-white/70 py-16">
       <Container>
         <div className="flex justify-between items-center relative">
           <Badge

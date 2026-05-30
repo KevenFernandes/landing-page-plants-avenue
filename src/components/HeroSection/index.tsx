@@ -24,7 +24,7 @@ export function HeroSection() {
             <div
               className={clsx(
                 "w-15 h-15 md:w-20 md:h-20",
-                "bg-info rounded-full",
+                "bg-primary rounded-full",
                 "border-2 border-white flex items-center",
                 "justify-center flex-col font-serif",
                 "absolute bottom-[50%] translate-y-[50%]",
