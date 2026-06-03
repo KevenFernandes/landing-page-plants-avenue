@@ -38,7 +38,7 @@ export function ProductArticle({ name, price, imageUrl }: ProductArticleTypes) {
           </button>
         </div>
       </Link>
-      <div className="text-sm font-semibold mt-1">
+      <div className="text-sm md:text-base font-semibold mt-1">
         <h3>{name}</h3>
         <p className="text-secondary">${price}</p>
       </div>

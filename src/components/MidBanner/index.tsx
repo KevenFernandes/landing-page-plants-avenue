@@ -1,26 +1,16 @@
 import { ArrowRightIcon } from "lucide-react";
-import { Button } from "../Button";
+import { CustomLink } from "../CustomLink";
 import { Container } from "../Container";
 import { TitleSection } from "../TitleSection";
 import Image from "next/image";
-
-/*
-6. Mid-Page Banner (Banner "Grow Plant")
-Título: > Grow Plant For A Better Life (Cultive Plantas para uma Vida Melhor)
-
-Texto: Cultivating plants enhances well-being and contributes to a healthier environment, fostering a more fulfilling life. 
-(Cultivar plantas aumenta o bem-estar e contribui para um ambiente mais saudável, promovendo uma vida mais plena.)
-
-Botão: Read More ➔ (Leia Mais) 
-*/
 
 export function MidBanner() {
   return (
     <section className="bg-primary">
       <Container>
-        <div className="flex justify-between h-60 py-6">
+        <div className="flex justify-evenly gap-6 h-60 py-6 sm:items-center">
           <div className="flex flex-col gap-4">
-            <div className="max-w-50">
+            <div className="w-40 sm:w-60 ">
               <TitleSection
                 variant="ghost"
                 size="xl"
@@ -29,11 +19,15 @@ export function MidBanner() {
               />
             </div>
             <div className="sm:hidden">
-              <Button buttonText="Leia Mais" icon={ArrowRightIcon} />
+              <CustomLink
+                href="#"
+                buttonText="Leia Mais"
+                icon={ArrowRightIcon}
+              />
             </div>
           </div>
-          <div className="relative self-end">
-            <div className="flex w-45 h-45 rounded-full overflow-hidden">
+          <div className="relative self-end sm:self-center h-full">
+            <div className="flex w-48 max-h-48 rounded-full overflow-hidden">
               <Image
                 src="/plantas/mid-banner1.jpg"
                 width={500}
@@ -52,12 +46,12 @@ export function MidBanner() {
               />
             </div>
           </div>
-          <div className="hidden sm:block">
-            <p className="text-white/60">
+          <div className="hidden sm:flex flex-col gap-3 self-end">
+            <p className="text-light/60 text-xs sm:text-sm  max-w-60 sm:max-w-75">
               Cultivar plantas aumenta o bem-estar e contribui para um ambiente
               mais saudável, promovendo uma vida mais plena.
             </p>
-            <Button buttonText="Leia Mais" icon={ArrowRightIcon} />
+            <CustomLink href="#" buttonText="Leia Mais" icon={ArrowRightIcon} />
           </div>
         </div>
       </Container>

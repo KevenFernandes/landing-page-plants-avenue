@@ -1,16 +1,24 @@
 import clsx from "clsx";
 import { LucideProps } from "lucide-react";
+import Link from "next/link";
 
-type ButtonProps = {
+type CustomLinkProps = {
   buttonText: string;
+  href: string;
   icon?: React.ElementType<LucideProps>;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export function Button({ buttonText, icon: Icon, ...props }: ButtonProps) {
+export function CustomLink({
+  buttonText,
+  href,
+  icon: Icon,
+  ...props
+}: CustomLinkProps) {
   return (
-    <button
+    <Link
+      href={href}
       className={clsx(
-        "w-fit rounded-3xl text-white",
+        "w-fit rounded-3xl text-light",
         "text-sm md:text-base text-nowrap",
         "px-2 py-1 md:px-4 md:py-2",
         "bg-secondary cursor-pointer",
@@ -24,6 +32,6 @@ export function Button({ buttonText, icon: Icon, ...props }: ButtonProps) {
           <Icon color="black" size={20} />
         </span>
       )}
-    </button>
+    </Link>
   );
 }

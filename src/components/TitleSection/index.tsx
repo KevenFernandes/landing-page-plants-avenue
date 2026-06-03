@@ -14,12 +14,12 @@ export function TitleSection({
 }: TitleSectionProps) {
   const variantMap = {
     primary: "text-primary",
-    ghost: "text-white",
+    ghost: "text-light",
   };
 
   const sizeMap = {
     lg: "text-lg",
-    xl: "text-xl sm:text-2xl",
+    xl: "text-xl sm:text-2xl lg:text-4xl",
   };
 
   const weightMap = {
@@ -31,7 +31,7 @@ export function TitleSection({
   return (
     <h1
       className={clsx(
-        "font-playfair",
+        "font-playfair lg:py-4",
         variantMap[variant],
         sizeMap[size],
         weightMap[weight],

@@ -71,7 +71,7 @@ export function ProductSection() {
                   className={clsx(
                     "border-2 border-primary rounded-2xl px-2 py-1",
                     "transition-all cursor-pointer",
-                    `${activeCat === cat.id && "bg-primary text-white"}`,
+                    `${activeCat === cat.id && "bg-primary text-light"}`,
                   )}
                   onClick={() => setActiveCat(cat.id)}
                   key={cat.id}
