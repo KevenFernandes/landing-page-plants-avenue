@@ -1,19 +1,20 @@
-import {
-  HamburgerIcon,
-  HeartIcon,
-  MenuIcon,
-  ShoppingBagIcon,
-  UserIcon,
-} from "lucide-react";
+"use client";
+import { HeartIcon, MenuIcon, ShoppingBagIcon, UserIcon } from "lucide-react";
 import Link from "next/link";
 import { Container } from "../Container";
 import { LogoIcon } from "../LogoIcon";
+import { useState } from "react";
+import { MenuHamburgue } from "../MenuHamburgue";
 
 export function Header() {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  console.log(showMenu);
+
   return (
     <header className="absolute top-0 w-full z-50">
       <Container>
-        <div className="flex justify-between items-center py-6 text-white">
+        <div className="flex justify-between items-center py-6 text-light">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 flex items-center">
               <LogoIcon />
@@ -39,7 +40,7 @@ export function Header() {
             </ul>
           </div>
           <div>
-            <div className="hidden md:flex gap-2">
+            <div className="hidden md:flex gap-2 [&_button]:cursor-pointer">
               <button>
                 <HeartIcon size={20} />
               </button>
@@ -51,13 +52,17 @@ export function Header() {
               </Link>
             </div>
             <div className="md:hidden flex items-center">
-              <button className="cursor-pointer">
+              <button
+                className="cursor-pointer"
+                onClick={() => setShowMenu(true)}
+              >
                 <MenuIcon />
               </button>
             </div>
           </div>
         </div>
       </Container>
+      {<MenuHamburgue showMenu={showMenu} closeMenu={setShowMenu} />}
     </header>
   );
 }
