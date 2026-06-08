@@ -1,0 +1,23 @@
+# Usa uma imagem leve do Node.js
+FROM node:slim
+
+# Define o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Copia apenas os arquivos de dependências primeiro (otimiza o cache do Docker)
+COPY package*.json ./
+
+# Instala as dependências do projeto
+RUN npm install
+
+# Copia o restante dos arquivos do projeto
+COPY . .
+
+
+# Expõe a porta que o seu frontend usa (ex: 3000 ou 5173)
+EXPOSE 3000
+
+# Executa o comando de dev garantindo que aceite conexões externas (0.0.0.0)
+# Se for Next.js: "npm", "run", "dev", "--", "-H", "0.0.0.0"
+# Se for Vite: certifique-se que o script dev no package.json tem a flag --host
+CMD ["npm", "run", "dev"]

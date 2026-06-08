@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: meu-frontend-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    # network_mode: host
+    ports:
+      - "3000:3000" # Mapeia a porta 3000 da sua máquina para a 3000 do container
+    volumes:
+      - .:/app # Sincroniza sua pasta local com a pasta do container (Hot Reload)
+      - /app/node_modules # Evita que o Docker sobrescreva os node_modules do container com os locais
+      - /app/.next
+    environment:
+      - NODE_ENV=development
