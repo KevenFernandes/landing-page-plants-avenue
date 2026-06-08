@@ -6,6 +6,7 @@ import { ProductArticle } from "../ProductArticle";
 import { MOCK_CATEGORIES } from "@/src/mocks/categories";
 import { MOCK_PRODUCTS } from "@/src/mocks/products";
 import { TitleSection } from "../TitleSection";
+import { TrashIcon } from "lucide-react";
 
 export function ProductSection() {
   const [activeCat, setActiveCat] = useState<number>(1);
@@ -48,13 +49,31 @@ export function ProductSection() {
     return () => window.removeEventListener("resize", listenScreen);
   }, []);
 
+  const getOrderedProducts = () => {
+    switch (activeCat) {
+      case 1:
+        return MOCK_PRODUCTS.toSorted((a, b) => b.sales - a.sales);
+      case 2:
+        return MOCK_PRODUCTS.toSorted((a, b) => b.favorites - a.favorites);
+      case 3:
+        return MOCK_PRODUCTS.toSorted((a, b) => Number(b.new) - Number(a.new));
+      default:
+        return MOCK_PRODUCTS;
+    }
+  };
+
+  const currentProductList = getOrderedProducts();
+
   const startIndex = (currentPage - 1) * limitItems;
   const endIndex = startIndex + limitItems;
 
-  const visibleProducts = MOCK_PRODUCTS.slice(startIndex, endIndex);
-  const qtdPages = Math.ceil(MOCK_PRODUCTS.length / limitItems);
+  const visibleProducts = currentProductList.slice(startIndex, endIndex);
+  const qtdPages = Math.ceil(currentProductList.length / limitItems);
 
-  console.log(visibleProducts);
+  const handleCategoryChange = (catId: number) => {
+    setActiveCat(catId);
+    setCurrentPage(1);
+  };
 
   return (
     <section>
@@ -73,13 +92,19 @@ export function ProductSection() {
                     "transition-all cursor-pointer",
                     `${activeCat === cat.id && "bg-primary text-light"}`,
                   )}
-                  onClick={() => setActiveCat(cat.id)}
+                  onClick={() => handleCategoryChange(cat.id)}
                   key={cat.id}
                 >
                   {cat.name}
                 </button>
               );
             })}
+            <button
+              className="cursor-pointer"
+              onClick={() => handleCategoryChange(0)}
+            >
+              <TrashIcon />
+            </button>
           </div>
           <div
             className={clsx(
